@@ -1,0 +1,526 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+ 
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links .active {
+    color: #ff8c00;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: left;
+    padding-top: 80px;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text h1 span {
+    color: #ff8c00;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;    
+    max-width: 250px; 
+    border-radius: 20px; 
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); 
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #ff8c00;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #444;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Contact Section */
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: px; /* Jarak antar elemen */
+    padding: 35px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.contact-list li:hover {
+    transform: scale(1.05);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.contact-list a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .contact-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 kolom untuk layar sangat kecil */
+    }
+}
+
+
+/* MODAL POPUP */
+.modal {
+    display: none; /* Awalnya tersembunyi */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+/* KONTEN MODAL */
+.modal-content {
+    background-color: #1c1c1c;
+    padding: 20px;
+    width: 40%;
+    max-height: 80%;
+    overflow-y: auto; /* Aktifkan scroll dalam modal */
+    border-radius: 10px;
+    position: relative;
+    color: #fff;
+}
+
+/* TOMBOL CLOSE */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* PROJECT CONTAINER */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8c00; /* Warna oranye */
+    margin-bottom: 10px;
+}
+
+/* GARIS PEMISAH ANTARA PROYEK */
+.project-divider {
+    border-top: 2px solid #fff;
+    margin: 15px 0;
+}
+/* MENYESUAIKAN WARNA HANYA UNTUK PROYEK 1 DAN 2 */
+#project-2 .project-subtitle {
+    color: #ff8c00; /* Oranye untuk kedua proyek */
+}
+
+/* Warna oranye untuk subtitle proyek */
+.project-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8c00; /* Warna oranye */
+    margin-bottom: 10px;
+}
+
+/* Pastikan Proyek 1 memiliki warna oranye */
+#project-1 .project-subtitle {
+    color: #ff8c00 !important; /* Paksa warna oranye */
+}
+
+.project img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* TOMBOL POPUP */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #666;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-links a:hover, .nav-links .active {
+    color: #ff8c00;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Project Section */
+.project {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    text-align: center;
+    width: 22%;
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+/* Education Section */
+#education {
+    text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mengatur posisi ikon di kiri */
+.left-icons {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* Container untuk profil dan ikon */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px; /* Jarak antara foto dan ikon */
+    margin-top: 50px;
+}
+
+/* Gambar profil */
+.profile-img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Container ikon */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Row untuk ikon (2 ikon per baris) */
+.icon-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling ikon */
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: left;
+    padding-top: 80px;
+}
+
+/* Kontainer utama */
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+/* Gambar Profil */
+.hero-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Container utama */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 80px;
+    position: relative;
+}
+
+/* Hero Text */
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Foto Profil */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    position: absolute;
+    right: 60px;
+    bottom: 28%; 
+    transform: translateY(50%);
+}
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0px;
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+    transition: bottom 20% ease-in-out; /* Efek animasi */
+}
+
+/* Grouping untuk setiap icon */
+.icon-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-group img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.icon-group span {
+    color: #ff8c00;
+    font-weight: bold;
+}

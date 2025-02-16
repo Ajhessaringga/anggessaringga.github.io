@@ -4,40 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Anggessaringga</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Halo, Saya Anggessaringga!</h1>
-        <p>Web Developer & UI/UX Enthusiast</p>
-        <a href="#about" class="btn-primary">Tentang Saya</a>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <h2 class="logo">PORTOFOLIO</h2>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#portfolio" class="nav-item">Portofolio</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Hello, <br> I Am <span>Angges Saringga</span></h1>
+                <p>Junior Programmer & Web Developer</p>
+                <a href="assets/CV.pdf" download class="btn-primary">Download CV</a>
+                <button id="viewProjectBtn" class="btn-secondary">Experience Proyek</button>
+            </div>
+    
+            <div class="hero-image">
+                <img src="assets/images/Profile.png" alt="Profile Image">
+            </div>
+    
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <div class="icon-group">
+                    <img src="assets/images/python.jpg" alt="Python">
+                    <img src="assets/images/Bahasa_C.jpg" alt="C#">
+                    <img src="assets/images/postman.jpg" alt="Postman">
+                    <img src="assets/images/sql.jpg" alt="SQL">
+                </div>
     </header>
 
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya seorang pengembang web yang antusias dengan pengalaman dalam HTML, CSS, dan JavaScript.</p>
-    </section>
+  
+<!-- MODAL POPUP - PROYEK PKL -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>📂 List Proyek</h2>
+            <h3 class="sub-title">Proyek 1</h3> 
+        </div>
 
-    <section id="projects">
-        <h2>Proyek Saya</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Proyek 1</h3>
-                <p>Deskripsi singkat proyek.</p>
-                <a href="https://github.com/ajhessaringga/proyek1" class="btn-secondary">Lihat Proyek</a>
+        <!-- Proyek 1: Sistem Pengolahan Data - PKL -->
+        <div class="project">
+            <!-- Judul Proyek -->
+            <h3>Design and Creation of Data Processing Systems</h3>
+            <p><strong>Perusahaan:</strong> PT Inovasi Mitra Sejati</p>
+            <p><strong>Deskripsi:</strong> This application is designed to manage company data in the company's financial accounting and HR systems.</p>
+            <p><strong>Peran:</strong> Backend & AI Developer</p>
+            <p><strong>Teknologi:</strong> SQL Server, Angular, Node.js, Postman, Git</p>
+        
+            <!-- Gambar Dokumentasi PKL -->
+            <div class="project-image-container">
+                <div class="project-image">
+                    <img src="assets/images/pkl_project.jpg" alt="Project PKL">
+                    <p class="image-description">
+                        <strong>Dashboard Proyek:</strong> Displays key project information such as project name, client, contract value, and project milestones.
+                    </p>
+                </div>
+        
+                <div class="project-image">
+                    <img src="assets/images/pkl_milestone.jpg" alt="Milestone PKL">
+                    <p class="image-description">
+                        <strong>Milestone Project:</strong> Project milestone recording system to ensure the project runs according to the planned stages.
+                    </p>
+                </div>
+        
+                <div class="project-image">
+                    <img src="assets/images/pkl_employee.jpg" alt="Employee Management">
+                    <p class="image-description">
+                        <strong>Manajemen Karyawan:</strong> Provides information about employee lists, positions, departments, and company policies.
+                    </p>
+                </div>
+        
+                <div class="project-image">
+                    <img src="assets/images/pkl_working day.jpg" alt="Master Working Day">
+                    <p class="image-description">
+                        <strong>Jadwal Kerja:</strong> Organize work schedules and work days within the company to ensure operational efficiency.
+                    </p>
+                </div>
             </div>
-            <div class="project">
-                <h3>Proyek 2</h3>
-                <p>Deskripsi singkat proyek.</p>
-                <a href="https://github.com/ajhessaringga/proyek2" class="btn-secondary">Lihat Proyek</a>
+        
+            <!-- Detail tambahan -->
+            <ul class="project-details">
+                <li><strong>Master Milestone:</strong> Managing Project achievements within the company.</li>
+                <li><strong>Menu Employee:</strong> Provides information about employees and company policies.</li>
+                <li><strong>Employee Attendance:</strong> Employee attendance and absence records.</li>
+                <li><strong>Master Working Day:</strong> Arrange work schedules and work days in the company.</li>
+            </ul>
+        </div>
+        
+        <!-- Proyek 2 -->
+<div class="project">
+    <span class="project-subtitle">Proyek 2</span>
+    <h3 class="project-title">Sistem deteksi aloe vera Berbasis AI</h3>
+    <hr class="project-divider">
+    <p><strong>Institusi:</strong> Politeknik Negeri Padang</p>
+    <p><strong>Deskripsi:</strong> This project aims to create an AI-based system that can assist in strategic decision making based on automatically processed data.</p>
+    <p><strong>Peran:</strong> Full Stack Developer & Machine Learning Engineer</p>
+    <p><strong>Teknologi:</strong> Python, TensorFlow, Flask, React.js, PostgreSQL</p>
+
+    <!-- Gambar Dokumentasi TA -->
+    <div class="modal-images">
+        <img src="assets/images/TA1.png" alt="TA Gambar 1">
+        <img src="assets/images/TA2.png" alt="TA Gambar 2">
+        <img src="assets/images/TA3.png" alt="TA Gambar 3">
+        <img src="assets/images/TA4.png" alt="TA Gambar 4">
+    </div>
+
+    <!-- Detail tambahan -->
+    <ul>
+        <li><strong>Data Processing:</strong> Data processing using TensorFlow for business decision prediction.</li>
+        <li><strong>Frontend:</strong> React.js based interface to display analysis results.</li>
+        <li><strong>Backend:</strong> Flask-based API for communication between frontend and AI models.</li>
+        <li><strong>Database:</strong> PostgreSQL to store analysis results and user data.</li>
+    </ul>
+</div>
+        
+
+        <!-- Tombol Tutup Modal -->
+        <button id="closeModal" class="btn-secondary">close</button>
+    </div>
+</div>
+
+<!-- SECTION PORTFOLIO -->
+<section id="portfolio">
+    <div class="container">
+        <h2>Portofolio</h2>
+        <h2>📌 Projects</h2>
+
+        <div class="project">
+            <h3>📁 Sistem Deteksi Aloe Vera (CNN)</h3>
+            <p><strong>Durasi:</strong> 2 Mounth</p>
+            <p><strong>Peran:</strong> Full Stack Developer & Machine Learning </p>
+            <p><strong>Teknologi:</strong> Python, TensorFlow, OpenCV</p>
+            <img src="assets/images/TA1.png" alt="Proyek Aloe Vera">
+            <img src="assets/images/TA2.png" alt="Proyek Aloe Vera">
+            <img src="assets/images/TA3.png" alt="Proyek Aloe Vera">
+            <img src="assets/images/TA4.png" alt="Proyek Aloe Vera">
+        </div>
+
+        <div class="project">
+            <h3>📁 Accounting & HR Financial System</h3>
+            <p><strong>Durasi:</strong> 4 Mounth</p>
+            <p><strong>Peran:</strong> Full Stack Developer</p>
+            <p><strong>Teknologi:</strong> SQL Server, Angular, Node.js, Git</p>
+            <img src="assets/images/pkl_employee.jpg" alt="Proyek Keuangan & HR">
+            <img src="assets//images/pkl_milestone.jpg" alt="Proyek Keuangan & HR">
+            <img src="assets/images/pkl_project.jpg" alt="Proyek Keuangan & HR">
+            <img src="assets/images/pkl_working_day.jpg" alt="Proyek Keuangan & HR">
+        </div>
+
+        <h2>🛠 Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="assets/images/python.jpg" alt="Python">
+                <p><strong>Python:</strong> Programming languages ​​for AI, Data Science, and Backend.</p>
+            </div>
+            <div class="skill">
+                <img src="assets/images/Bahasa_C.jpg" alt="Bahasa_C">
+                <p><strong>Bahasa_C#:</strong> Used for desktop application and game development with Unity.</p>
+            </div>
+            <div class="skill">
+                <img src="assets/images/postman.jpg" alt="Postman">
+                <p><strong>Postman:</strong> Tools for testing APIs and developing RESTful Services.</p>
+            </div>
+            <div class="skill">
+                <img src="assets/images/sql.jpg" alt="SQL">
+                <p><strong>SQL:</strong> Used to manage and process databases efficiently.</p>
+            </div>
+        </div>
+
+        <h2>🎓 Education</h2>
+        <p><strong>Politeknik Negeri Padang</strong> - Teknologi informasi</p>
+        <p><strong>Pelatihan:</strong> Full Stack Web Development, Machine Learning, Database Management</p>
+    </div>
+</section>
+        <!-- Modal untuk Detail Proyek -->
+        <div id="projectDetailModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeProjectDetails()">&times;</span>
+                <h2>Data Processing System- PKL</h2>
+                <div class="modal-images">
+                    <img src="assets/images/pkl_project.jpg" alt="Project Dashboard">
+                    <img src="assets/images/pkl_employee.jpg" alt="Employee Management">
+                    <img src="assets/images/pkl_milestone.jpg" alt="Milestone Management">
+                    <img src="assets/images/pkl_working day.jpg" alt="Working Day Setup">
+                </div>
+                <ul>
+                    <li><strong>Master Milestone:</strong> Project Achievements</li>
+                    <li><strong>Employee Management:</strong> Employee data management</li>
+                    <li><strong>Employee Attendance:</strong> Employee attendance recording</li>
+                    <li><strong>Master Working Day:</strong> Work schedule settings</li>
+                </ul>
             </div>
         </div>
     </section>
 
+    
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p>You can reach me through the following channels:</p>
+            <ul class="contact-list">
+                <li>
+                    <img src="assets/images/email.jpg" alt="Email Icon" class="contact-icon">
+                    <a href="mailto:saringgaanggess@email.com">saringgaanggess@email.com</a>
+                </li>
+                <li>
+                    <img src="assets/images/whatsapp.jpg" alt="WhatsApp Icon" class="contact-icon">
+                    <a href="https://wa.me/6282288379512" target="_blank">+62 82288379512</a>
+                </li>
+                <li>
+                    <img src="assets/images/linked_in.jpg" alt="LinkedIn Icon" class="contact-icon">
+                    <a href="https://www.linkedin.com/in/anggessaringga" target="_blank">Angges Saringga</a>
+                </li>
+                <li>
+                    <img src="assets/images/twiter.jpg" alt="Twitter Icon" class="contact-icon">
+                    <a href="https://twitter.com/anggessaringga3" target="_blank">@anggessaringga3</a>
+                </li>
+                <li>
+                    <img src="assets/images/tiktok.jpg" alt="TikTok Icon" class="contact-icon">
+                    <a href="https://www.tiktok.com/@ajhes.s" target="_blank">@ajhes.s</a>
+                </li>
+                <li>
+                    <img src="assets/images/instagram.jpg" alt="Instagram Icon" class="contact-icon">
+                    <a href="https://www.instagram.com/sr_angges" target="_blank">@sr_angges</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2024 Anggessaringga</p>
+        <div class="container">
+            <p>© 2024 Anggessaringga</p>
+        </div>
     </footer>
+
+    <script>
+        // SMOOTH SCROLLING FUNCTION
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // PASTIKAN NAVBAR MENU BISA SCROLL
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
 </body>
 </html>
