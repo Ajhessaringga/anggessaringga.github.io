@@ -1,12 +1,76 @@
+/* Reset dasar */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #fff;
     text-align: center;
-    margin: 50px;
-    background-color: #f4f4f4;
 }
-h1 {
-    color: #333;
+
+/* Header */
+header {
+    background: linear-gradient(to right, #ff8c00, #ff2e63);
+    padding: 50px 20px;
 }
-p {
-    color: #555;
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Tentang Saya */
+#about {
+    padding: 50px 20px;
+    background-color: #222;
+}
+
+/* Proyek */
+#projects {
+    padding: 50px 20px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 20px;
+    margin-top: 20px;
 }
