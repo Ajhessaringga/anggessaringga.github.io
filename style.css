@@ -74,52 +74,45 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
-/* Responsive untuk ukuran layar kecil (HP) */
+/* Tata Letak Default untuk Desktop */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Jarak antar ikon */
+    margin-top: 10px;
+}
+
+/* Buat agar ikon berada di bawah profil di HP */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Susun elemen ke bawah */
-        align-items: center; /* Pusatkan elemen */
-        text-align: center;
-        padding: 20px;
-    }
-
-    .hero-text {
-        width: 100%; /* Pastikan teks mengambil lebar penuh */
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem; /* Perkecil ukuran font di HP */
-    }
-
-    .hero-image img {
-        width: 80%; /* Perkecil ukuran gambar */
-        max-width: 250px;
-        display: block;
-        margin: 0 auto; /* Pusatkan gambar */
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 90%; /* Buat tombol lebih lebar di HP */
-        margin: 10px 0; /* Beri jarak antar tombol */
-    }
-
-    /* Perbaiki posisi icon */
     .social-icons {
-        flex-direction: row; /* Buat icon berjajar */
-        justify-content: center; /* Pusatkan icon */
-        gap: 10px;
-        margin-top: 15px;
+        flex-wrap: wrap; /* Agar ikon tidak melebar keluar layar */
+        justify-content: center; /* Pusatkan ikon */
+        margin-top: 10px;
+        position: relative;
     }
 
     .social-icons img {
-        width: 35px; /* Perkecil ukuran icon */
-        height: 35px;
+        width: 40px; /* Perkecil ikon di HP */
+        height: 40px;
     }
 
-    /* Hindari foto profil menutupi elemen lain */
+    .icon-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; /* Jarak antar ikon */
+    }
+
     .hero-image {
-        order: -1; /* Pindahkan foto ke atas */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image img {
+        width: 80%; /* Perkecil foto profil di HP */
+        max-width: 250px;
     }
 }
+
 
