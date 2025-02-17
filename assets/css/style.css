@@ -535,33 +535,38 @@ section {
 
 /* Buat agar ikon berada di bawah profil di HP */
 @media (max-width: 768px) {
-    .social-icons {
-        flex-wrap: wrap; /* Agar ikon tidak melebar keluar layar */
-        justify-content: center; /* Pusatkan ikon */
-        margin-top: 10px;
-        position: relative;
+    /* Mengatur tata letak ikon di samping profil agar sejajar */
+.social-icons {
+    display: flex;
+    justify-content: center;  /* Posisikan ikon di tengah */
+    gap: 10px; /* Beri jarak antar ikon */
+    position: absolute;
+    bottom: 0; /* Pastikan ikon sejajar dengan bawah foto */
+    right: 50px; /* Jarak dari kanan */
+}
+
+/* Responsiveness untuk tampilan mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal */
+        align-items: center; /* Posisikan elemen ke tengah */
+        text-align: center;
     }
 
-    .social-icons img {
-        width: 40px; /* Perkecil ikon di HP */
-        height: 40px;
-    }
-
-    .icon-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px; /* Jarak antar ikon */
+    .hero-text {
+        order: 2; /* Pastikan teks tetap di atas */
     }
 
     .hero-image {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        order: 1; /* Pastikan gambar tetap di atas teks */
     }
 
-    .hero-image img {
-        width: 80%; /* Perkecil foto profil di HP */
-        max-width: 250px;
+    .social-icons {
+        position: relative; /* Bukan absolute agar tidak keluar layout */
+        bottom: auto;
+        right: auto;
+        justify-content: center; /* Ikon tetap sejajar */
+        margin-top: 20px; /* Jarak dari elemen lain */
     }
 }
+}  
