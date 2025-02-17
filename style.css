@@ -74,3 +74,37 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
+/* Ukuran layar kecil (HP) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Elemen jadi susun ke bawah */
+        text-align: center; /* Pusatkan teks */
+        padding: 20px; /* Beri padding agar tidak menempel ke sisi */
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem; /* Kecilkan ukuran teks */
+    }
+
+    .hero-image img {
+        width: 80%; /* Buat gambar lebih kecil */
+        max-width: 250px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Tombol penuh layar */
+        margin: 10px 0; /* Tambahkan jarak antar tombol */
+    }
+
+    .social-icons {
+        flex-direction: row; /* Icon sejajar */
+        justify-content: center; /* Pusatkan icon */
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .social-icons img {
+        width: 40px; /* Kecilkan icon */
+        height: 40px;
+    }
+}
