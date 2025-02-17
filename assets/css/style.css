@@ -524,3 +524,44 @@ section {
     color: #ff8c00;
     font-weight: bold;
 }
+
+/* Tata Letak Default untuk Desktop */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Jarak antar ikon */
+    margin-top: 10px;
+}
+
+/* Buat agar ikon berada di bawah profil di HP */
+@media (max-width: 768px) {
+    .social-icons {
+        flex-wrap: wrap; /* Agar ikon tidak melebar keluar layar */
+        justify-content: center; /* Pusatkan ikon */
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .social-icons img {
+        width: 40px; /* Perkecil ikon di HP */
+        height: 40px;
+    }
+
+    .icon-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; /* Jarak antar ikon */
+    }
+
+    .hero-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image img {
+        width: 80%; /* Perkecil foto profil di HP */
+        max-width: 250px;
+    }
+}
