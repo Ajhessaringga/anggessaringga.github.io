@@ -74,37 +74,52 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
-/* Ukuran layar kecil (HP) */
+/* Responsive untuk ukuran layar kecil (HP) */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Elemen jadi susun ke bawah */
-        text-align: center; /* Pusatkan teks */
-        padding: 20px; /* Beri padding agar tidak menempel ke sisi */
+        flex-direction: column; /* Susun elemen ke bawah */
+        align-items: center; /* Pusatkan elemen */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text {
+        width: 100%; /* Pastikan teks mengambil lebar penuh */
+        text-align: center;
     }
 
     .hero-text h1 {
-        font-size: 1.8rem; /* Kecilkan ukuran teks */
+        font-size: 1.8rem; /* Perkecil ukuran font di HP */
     }
 
     .hero-image img {
-        width: 80%; /* Buat gambar lebih kecil */
+        width: 80%; /* Perkecil ukuran gambar */
         max-width: 250px;
+        display: block;
+        margin: 0 auto; /* Pusatkan gambar */
     }
 
     .btn-primary, .btn-secondary {
-        width: 100%; /* Tombol penuh layar */
-        margin: 10px 0; /* Tambahkan jarak antar tombol */
+        width: 90%; /* Buat tombol lebih lebar di HP */
+        margin: 10px 0; /* Beri jarak antar tombol */
     }
 
+    /* Perbaiki posisi icon */
     .social-icons {
-        flex-direction: row; /* Icon sejajar */
+        flex-direction: row; /* Buat icon berjajar */
         justify-content: center; /* Pusatkan icon */
         gap: 10px;
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
     .social-icons img {
-        width: 40px; /* Kecilkan icon */
-        height: 40px;
+        width: 35px; /* Perkecil ukuran icon */
+        height: 35px;
+    }
+
+    /* Hindari foto profil menutupi elemen lain */
+    .hero-image {
+        order: -1; /* Pindahkan foto ke atas */
     }
 }
+
